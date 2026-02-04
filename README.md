@@ -1,3 +1,3 @@
-#job interview practice tool for first generation, neurodivergent, unfamiliar with interviews lets user practice answers
-random opportunities in area, where they are in the world ex) New Orleans: How good are you at playing music? skills matcherish
+-**job interview practice tool** for first generation, neurodivergent, unfamiliar with interviews lets user practice answers
+-**random opportunities in area**, where they are in the world ex) New Orleans: How good are you at playing music? skills matcherish
 # Team-WMT
