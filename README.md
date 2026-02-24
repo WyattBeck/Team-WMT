@@ -1,4 +1,5 @@
-# Update 2/23 - Now that we have decided to do the interview dress program it should probably be laid out in the following ways:
+# Team WT - Update 2/23
+Now that we have decided to do the interview dress program it should probably be laid out in the following ways:
 1. Ask User for job type
 2. Ask user for interview type
 3. Ask user for budget
