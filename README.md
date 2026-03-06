@@ -22,3 +22,9 @@ Side note - Also talked about whether or not to include a question about gender 
 I (Tyler) added the initial base code to our Githud group project, Wyatt added the psuedocode he was working on as well. Still working out kinks to make sure it works properly, but the main visual framework is up and works, to an extent. Working on applying 'if' statements so the results can be accurately shown.
 
 Also talked about our group check-in comments, and are planning on updating those so we can resubmit them with the missing info.
+
+# Team-WT - Update 3/5
+
+Updated base code with complete suggestions, and connected clothing restrictions to their own suggestion which comes in the same window as the initial suggestion. Working on fully connecting the disibilities segment for more accurate suggestions. Also found a really nice website to use for fabric alternatives for people with sensory issues.
+
+Fabric Alternative website - https://sensorysmart.co.uk/blogs/news/the-best-fabrics-for-sensory-sensitivity-and-what-to-avoid
