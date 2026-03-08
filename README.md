@@ -29,10 +29,13 @@ Updated base code with complete suggestions, and connected clothing restrictions
 
 Fabric Alternative website - https://sensorysmart.co.uk/blogs/news/the-best-fabrics-for-sensory-sensitivity-and-what-to-avoid
 
-Adding refrence sites I've found so far. - Wyatt
+Adding reference sites I've found so far. - Wyatt
+
 Indeed.com "How to dress for an interview" - https://www.indeed.com/career-advice/interviewing/how-to-dress-for-a-job-interview
 coursea.org "What to wear for an interview" - https://www.coursera.org/articles/what-to-wear-to-an-interview
+
 Naukri.com "How to Dress for an Interview Formally" - https://www.naukri.com/campus/career-guidance/dress-code-for-freshers-in-interview-and-office
 Goodhousekeeping.com "Adaptive Clothing" - https://www.goodhousekeeping.com/clothing/g35408937/adaptive-clothing/
+
 OUGM.org "Clothing Bank hours of opperations and location" - https://ougm.org/our-programs/meals-services-and-more/
 ymcaofolympia.org "Kathleens Closet" - https://www.ywcaofolympia.org/kathleens-closet-1
