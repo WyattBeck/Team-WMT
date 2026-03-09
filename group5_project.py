@@ -1,4 +1,6 @@
 import tkinter as tk
+from tkinter import messagebox
+import webbrowser
 
 window = tk.Tk()
 window.title("Group 5's Interview Outfit Helper")
@@ -7,6 +9,7 @@ window.configure(bg="gray")
 job_types = ['Tech','Business','Trade','Retail','Creative']
 interview_types = ['In-Person','Video','Over Phone']
 budget_ranges = ['0', '1-50','51-150','151-200', '201-300']
+genders = ["Male", "Female", "Non-Binary"]
 shirt_suggestions = ['Solid shirt', 'Button-up shirt', 'Clean, collared shirt', 'Plain long sleeved',
                      'Polo shirt', 'Light sweater', 'Layered top: Jacket/Cardigan with a solid shirt']
 pants_suggestions = ['Clean jeans (no rips)', 'Solid work pants', 'Chinos', 'Casual slacks', 'Dress slacks']
@@ -16,6 +19,15 @@ clothing_restrictions = ['Religious Exemption', 'Disability', 'Fabric Sensory']
 religious_exemptions = ['Turban', 'Hijab', 'Yarmulke']
 disability_restrictions = ['Wheelchair', 'Amputee', 'Mental/Learning', 'Overweight', 'Surgery Related Bodily Changes']
 fabric_alternatives = ['Cotton', 'Bamboo', 'Modal', 'Lycra', 'Viscose or Rayon', 'Soft wool Alt.']
+
+messagebox.showinfo("Disclaimer",
+    "This program is meant for informational purposes only! It is not meant to be the definitive resource for interview attire, but a guide!")
+
+def open_link(event):
+    if genderChoice.get() == "Female":
+        webbrowser.open("https://www.ywcaofolympia.org/kathleens-closet-1")
+    else:
+        webbrowser.open("https://ougm.org/our-programs/meals-services-and-more/")
 
 def on_button_click():
     suggestion = get_recommendation()
@@ -33,31 +45,43 @@ def on_button_click():
     label2 = tk.Label(popup, text=alternate_suggestion)
     label2.pack(pady=10)
 
+    link = tk.Label(popup, text="Need interview clothing help:? Click here.", fg="blue", cursor="hand2", font=("Arial", 10, "underline"))
+    link.pack(pady=5)
+    link.bind("<Button-1>", open_link)
+
     close_button = tk.Button(popup, text="Close", command=popup.destroy)
     close_button.pack(pady=5)
 
 btn = tk.Button(window, text="Enter", command=on_button_click)
 btn.grid(row=0, column=3, padx=10, pady=15)
 
+window.columnconfigure(0, weight=1)
+window.columnconfigure(6, weight=1)
+
+heading_gender = tk.Label(window, text="Select your gender:", font=("Arial", 14))
+heading_gender.grid(row=17, column=1, padx=5, pady=15, columnspan=5)
+
+genderChoice = tk.StringVar(value="NotSelected")
+index = 2
+for gender in genders:
+    rb = tk.Radiobutton(window, text=gender, variable=genderChoice, value=gender)
+    rb.grid(row=18, column=index, padx=10, pady=5)
+    index = index + 1
+
 heading1 = tk.Label(window, text='Choose a job type:', font=("Arial", 14))
 heading1.grid(row=3, column=1, padx=10, pady=10, columnspan=5)
 
 jobChoice = tk.StringVar(value="NotSelected")
-
 index1 = 1
 for jobtype in job_types:
     rb = tk.Radiobutton(window, text=jobtype, variable=jobChoice, value=jobtype)
     rb.grid(row=4, column=index1, padx=10, pady=5)
     index1 = index1 + 1
 
-window.columnconfigure(0, weight=1)
-window.columnconfigure(6, weight=1)
-
 heading2 = tk.Label(window, text='Choose an interview type:', font=("Arial", 14))
 heading2.grid(row=7, column=1, padx=5, pady=20, columnspan=5)
 
 interviewChoice = tk.StringVar(value="NotSelected")
-
 index2 = 2
 for interviewtype in interview_types:
     rb = tk.Radiobutton(window, text=interviewtype, variable=interviewChoice, value=interviewtype)
@@ -68,7 +92,6 @@ heading3 = tk.Label(window, text='Enter your budget below:', font=("Arial", 14))
 heading3.grid(row=11, column=1, padx=5, pady=15, columnspan=5)
 
 budgetChoice = tk.StringVar(value="NotSelected")
-
 index3 = 1
 for budget in budget_ranges:
     rb = tk.Radiobutton(window, text=budget, variable=budgetChoice, value=budget)
@@ -79,13 +102,11 @@ heading4 = tk.Label(window, text="Do you have any clothing restrictions or disab
 heading4.grid(row=14, column=1, padx=5, pady=15, columnspan=5)
 
 alternateChoice = tk.StringVar(value="NotSelected")
-
 index4 = 2
 for alternatives in clothing_restrictions:
     rb = tk.Radiobutton(window, text=alternatives, variable=alternateChoice, value=alternatives)
     rb.grid(row=15, column=index4, padx=10, pady=5)
     index4 = index4 + 1
-
 
 
 def get_recommendation():
@@ -355,14 +376,14 @@ def get_recommendation():
 def get_alternatives():
     alternate_suggestion = "Nothing was entered."
     if alternateChoice.get() == clothing_restrictions[0]:
-        alternate_suggestion = ("Depending on your religion, we suggest one of these: " + religious_exemptions[0] + ", "
+        alternate_suggestion = ("Depending on your religion, I suggest one of these: " + religious_exemptions[0] + ", "
                                  + religious_exemptions[1] + ", or a " + religious_exemptions[2])
     elif alternateChoice.get() == clothing_restrictions[1]:
       #  if disability_restrictions ==
-        alternate_suggestion = ("If you are disabled and need an alternative, we suggest wearing clothing that is comfortable and easy to "
+        alternate_suggestion = ("If you are disabled and need an alternative, I suggest picking out clothing that is comfortable and easy to "
                                 "get on without much help. Also, for certain surgery related issues, we also recommend using darker clothing.")
     elif alternateChoice.get() == clothing_restrictions[2]:
-        alternate_suggestion = ("If you have issues with certain fabrics, we suggest one of these alternative fabrics: \n"
+        alternate_suggestion = ("If you have issues with certain fabrics, I suggest one of these alternative fabrics: \n"
                                 + fabric_alternatives[0] + ", " + fabric_alternatives[1] + ", " + fabric_alternatives[2] + ", " + fabric_alternatives[3] +
                                 ", " + fabric_alternatives[4] + ", or for those particularly susceptible to regular wool; a" + fabric_alternatives[5])
 
