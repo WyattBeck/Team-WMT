@@ -40,6 +40,6 @@ Goodhousekeeping.com "Adaptive Clothing" - https://www.goodhousekeeping.com/clot
 OUGM.org "Clothing Bank hours of opperations and location" - https://ougm.org/our-programs/meals-services-and-more/
 ymcaofolympia.org "Kathleens Closet" - https://www.ywcaofolympia.org/kathleens-closet-1
 
-#Team-WT - Update 3/9
+# Team-WT - Update 3/9
 
 Wyatt suggested some changes to current code base, and Tyler rearranged the changes to fit them into the code. These changes were for adding a gender choice, as well as adding website links to give further advice based on gender. Also added a messagebox pop-up with the premise the app works as a guide and is for informative purposes only.
