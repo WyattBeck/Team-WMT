@@ -159,11 +159,11 @@ def get_imagehelper():
             imageLocation = "./Project_Pictures/Naukri-BusinessCasual.png"
     if jobChoice.get() == job_types[3]:
         if genderChoice.get() == "Female":
-            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Female.png"
+            imageLocation = "./Project_Pictures/Naukri-SemiFormal-Female.png"
         elif genderChoice.get() == "Male":
-            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Male.png"
+            imageLocation = "./Project_Pictures/Naukri-SemiFormal-Male.png"
         elif genderChoice.get() == "Non-Binary":
-            imageLocation = "./Project_Pictures/Naukri-BusinessMix.png"
+            imageLocation = "./Project_Pictures/Naukri-SemiFormal.png"
     if jobChoice.get() == job_types[4]:
         if genderChoice.get() == "Female":
             imageLocation = "./Project_Pictures/Naukri-BusinessMix-Female.png"
