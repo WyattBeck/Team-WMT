@@ -60,7 +60,8 @@ def on_button_click():
     link = tk.Label(popup, text="Need interview clothing help:? Click here.", fg="blue", cursor="hand2", font=("Arial", 10, "underline"))
     link.pack(pady=5)
     link.bind("<Button-1>", open_link)
-    
+
+    image_helper = get_imagehelper()
     img = tk.PhotoImage(file=image_helper)
     label_img = tk.Label(popup, image=img)
     label_img.image = img # need to keep a reference of img
@@ -138,39 +139,39 @@ def get_imagehelper():
     imageLocation = ""
     if jobChoice.get() == job_types[0]:
         if genderChoice.get() == "Female":
-            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Female.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessCasual-Female.png"
         elif genderChoice.get() == "Male":
-            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Male.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessCasual-Male.png"
         elif genderChoice.get() == "Non-Binary":
-            imageLocation = "./Project_Pictures/Naukri-BusinessCasual.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessCasual.png"
     if jobChoice.get() == job_types[1]:
         if genderChoice.get() == "Female":
-            imageLocation = "./Project_Pictures/Naukri-BusinessFormal-Female.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessFormal-Female.png"
         elif genderChoice.get() == "Male":
-            imageLocation = "./Project_Pictures/Naukri-BusinessFormal-Male.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessFormal-Male.png"
         elif genderChoice.get() == "Non-Binary":
-            imageLocation = "./Project_Pictures/Naukri-BusinessFormal.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessFormal.png"
     if jobChoice.get() == job_types[2]:
         if genderChoice.get() == "Female":
-            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Female.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessCasual-Female.png"
         elif genderChoice.get() == "Male":
-            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Male.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessCasual-Male.png"
         elif genderChoice.get() == "Non-Binary":
-            imageLocation = "./Project_Pictures/Naukri-BusinessCasual.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessCasual.png"
     if jobChoice.get() == job_types[3]:
         if genderChoice.get() == "Female":
-            imageLocation = "./Project_Pictures/Naukri-SemiFormal-Female.png"
+            imageLocation = "assets/Project_Pictures/Naukri-SemiFormal-Female.png"
         elif genderChoice.get() == "Male":
-            imageLocation = "./Project_Pictures/Naukri-SemiFormal-Male.png"
+            imageLocation = "assets/Project_Pictures/Naukri-SemiFormal-Male.png"
         elif genderChoice.get() == "Non-Binary":
-            imageLocation = "./Project_Pictures/Naukri-SemiFormal.png"
+            imageLocation = "assets/Project_Pictures/Naukri-SemiFormal.png"
     if jobChoice.get() == job_types[4]:
         if genderChoice.get() == "Female":
-            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Female.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessMix-Female.png"
         elif genderChoice.get() == "Male":
-            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Male.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessMix-Male.png"
         elif genderChoice.get() == "Non-Binary":
-            imageLocation = "./Project_Pictures/Naukri-BusinessMix.png"
+            imageLocation = "assets/Project_Pictures/Naukri-BusinessMix.png"
     
     return imageLocation
 
