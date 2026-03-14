@@ -5,7 +5,12 @@ import webbrowser
 window = tk.Tk()
 window.title("Group 5's Interview Outfit Helper")
 window.geometry("900x800")
-window.configure(bg="gray")
+
+#background image code
+bg_img = tk.PhotoImage(file="assets/images/watersunset.png")
+bg_label = tk.Label(window, image=bg_img)
+bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+
 job_types = ['Tech','Business','Trade','Retail','Creative']
 interview_types = ['In-Person','Video','Over Phone']
 budget_ranges = ['0', '1-50','51-150','151-200', '201-300']
