@@ -2,17 +2,17 @@ import tkinter as tk
 from tkinter import messagebox
 import webbrowser
 
-#create main program window
+# create main program window
 window = tk.Tk()
 window.title("Group 5's Interview Outfit Helper")
 window.geometry("900x800")
 
-#background image code
+# background image code
 bg_img = tk.PhotoImage(file="assets/images/watersunset.png")
 bg_label = tk.Label(window, image=bg_img)
 bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
-#store option lists for user selections and outfit suggestions
+# store option lists for user selections and outfit suggestions
 job_types = ['Tech','Business','Trade','Retail','Creative']
 interview_types = ['In-Person','Video','Over Phone']
 budget_ranges = ['0', '1-50','51-150','151-200', '201-300']
@@ -22,24 +22,24 @@ shirt_suggestions = ['Solid shirt', 'Button-up shirt', 'Clean, collared shirt', 
 pants_suggestions = ['Clean jeans (no rips)', 'Solid work pants', 'Chinos', 'Casual slacks', 'Dress slacks']
 shoes_suggestions = ['Clean sneakers', 'Sturdy Boots or Shoes', 'Casual dress shoes', 'Formal dress shoes']
 
-#store clothing restriction options and alternative recommendations
+# store clothing restriction options and alternative recommendations
 clothing_restrictions = ['Religious Exemption', 'Disability', 'Fabric Sensory']
 religious_exemptions = ['Turban', 'Hijab', 'Yarmulke']
 disability_restrictions = ['Wheelchair', 'Amputee', 'Mental/Learning', 'Overweight', 'Surgery Related Bodily Changes']
 fabric_alternatives = ['Cotton', 'Bamboo', 'Modal', 'Lycra', 'Viscose or Rayon', 'Soft wool Alt.']
 
-#Alert box for disclaimer
+# Alert box for disclaimer
 messagebox.showinfo("Disclaimer",
     "This program is meant for informational purposes only! It is not meant to be the definitive resource for interview attire, but a guide!")
 
-#open outside clothing resource hyperlink based on gender selection
+# open outside clothing resource hyperlink based on gender selection
 def open_link(event):
     if genderChoice.get() == "Female":
         webbrowser.open("https://www.ywcaofolympia.org/kathleens-closet-1")
     else:
         webbrowser.open("https://ougm.org/our-programs/meals-services-and-more/")
 
-#creates the results popup windo after user clicks "Enter"
+# creates the results popup windo after user clicks "Enter"
 def on_button_click():
     suggestion = get_recommendation()
     alternate_suggestion = get_alternatives()
@@ -56,23 +56,28 @@ def on_button_click():
     label2 = tk.Label(popup, text=alternate_suggestion)
     label2.pack(pady=10)
 
-  #add clickable clothing resource link to popup
+  # add clickable clothing resource link to popup
     link = tk.Label(popup, text="Need interview clothing help:? Click here.", fg="blue", cursor="hand2", font=("Arial", 10, "underline"))
     link.pack(pady=5)
     link.bind("<Button-1>", open_link)
-
+    
+    img = tk.PhotoImage(file=image_helper)
+    label_img = tk.Label(popup, image=img)
+    label_img.image = img # need to keep a reference of img
+    label_img.pack(pady=10)
+    
     close_button = tk.Button(popup, text="Close", command=popup.destroy)
     close_button.pack(pady=5)
 
-#create Enter button for generting recommendatons 
+# create Enter button for generting recommendatons 
 btn = tk.Button(window, text="Enter", command=on_button_click)
 btn.grid(row=20, column=3, padx=10, pady=15)
 
-#config window spacing for main window
+# config window spacing for main window
 window.columnconfigure(0, weight=1)
 window.columnconfigure(6, weight=1)
 
-#create gender selection options
+# create gender selection options
 heading_gender = tk.Label(window, text="Select your gender:", font=("Arial", 14))
 heading_gender.grid(row=17, column=1, padx=5, pady=15, columnspan=5)
 
@@ -86,7 +91,7 @@ for gender in genders:
 heading1 = tk.Label(window, text='Choose a job type:', font=("Arial", 14))
 heading1.grid(row=3, column=1, padx=10, pady=10, columnspan=5)
 
-#create job slection options
+# create job slection options
 jobChoice = tk.StringVar(value="NotSelected")
 index1 = 1
 for jobtype in job_types:
@@ -97,7 +102,7 @@ for jobtype in job_types:
 heading2 = tk.Label(window, text='Choose an interview type:', font=("Arial", 14))
 heading2.grid(row=7, column=1, padx=5, pady=20, columnspan=5)
 
-#create interview type options
+# create interview type options
 interviewChoice = tk.StringVar(value="NotSelected")
 index2 = 2
 for interviewtype in interview_types:
@@ -108,7 +113,7 @@ for interviewtype in interview_types:
 heading3 = tk.Label(window, text='Enter your budget below:', font=("Arial", 14))
 heading3.grid(row=11, column=1, padx=5, pady=15, columnspan=5)
 
-#create budget options
+# create budget options
 budgetChoice = tk.StringVar(value="NotSelected")
 index3 = 1
 for budget in budget_ranges:
@@ -116,10 +121,10 @@ for budget in budget_ranges:
     rb.grid(row=12, column=index3, padx=10, pady=5)
     index3 = index3 + 1
 
-#create clothing restrictions options
 heading4 = tk.Label(window, text="Do you have any clothing restrictions or disabilities?", font=("Arial", 14))
 heading4.grid(row=14, column=1, padx=5, pady=15, columnspan=5)
 
+# create clothing restrictions options
 alternateChoice = tk.StringVar(value="NotSelected")
 index4 = 2
 for alternatives in clothing_restrictions:
@@ -127,7 +132,49 @@ for alternatives in clothing_restrictions:
     rb.grid(row=15, column=index4, padx=10, pady=5)
     index4 = index4 + 1
 
-#determine outfit recommendations based on job type, interview type, and budget
+# Displays the available picture based on chosen job + gender.
+def get_imagehelper():
+    image_helper = "Invalid without selection."
+    imageLocation = ""
+    if jobChoice.get() == job_types[0]:
+        if genderChoice.get() == "Female":
+            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Female.png"
+        elif genderChoice.get() == "Male":
+            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Male.png"
+        elif genderChoice.get() == "Non-Binary":
+            imageLocation = "./Project_Pictures/Naukri-BusinessCasual.png"
+    if jobChoice.get() == job_types[1]:
+        if genderChoice.get() == "Female":
+            imageLocation = "./Project_Pictures/Naukri-BusinessFormal-Female.png"
+        elif genderChoice.get() == "Male":
+            imageLocation = "./Project_Pictures/Naukri-BusinessFormal-Male.png"
+        elif genderChoice.get() == "Non-Binary":
+            imageLocation = "./Project_Pictures/Naukri-BusinessFormal.png"
+    if jobChoice.get() == job_types[2]:
+        if genderChoice.get() == "Female":
+            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Female.png"
+        elif genderChoice.get() == "Male":
+            imageLocation = "./Project_Pictures/Naukri-BusinessCasual-Male.png"
+        elif genderChoice.get() == "Non-Binary":
+            imageLocation = "./Project_Pictures/Naukri-BusinessCasual.png"
+    if jobChoice.get() == job_types[3]:
+        if genderChoice.get() == "Female":
+            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Female.png"
+        elif genderChoice.get() == "Male":
+            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Male.png"
+        elif genderChoice.get() == "Non-Binary":
+            imageLocation = "./Project_Pictures/Naukri-BusinessMix.png"
+    if jobChoice.get() == job_types[4]:
+        if genderChoice.get() == "Female":
+            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Female.png"
+        elif genderChoice.get() == "Male":
+            imageLocation = "./Project_Pictures/Naukri-BusinessMix-Male.png"
+        elif genderChoice.get() == "Non-Binary":
+            imageLocation = "./Project_Pictures/Naukri-BusinessMix.png"
+    
+    return imageLocation
+
+# determine outfit recommendations based on job type, interview type, and budget
 def get_recommendation():
     suggestion = "Nothing was entered, please make a selection."
 
@@ -392,14 +439,13 @@ def get_recommendation():
 
     return suggestion
 
-#determine alternative suggestions based on clothing restrictions 
+# determine alternative suggestions based on clothing restrictions 
 def get_alternatives():
     alternate_suggestion = "Nothing was entered."
     if alternateChoice.get() == clothing_restrictions[0]:
         alternate_suggestion = ("Depending on your religion, I suggest one of these: " + religious_exemptions[0] + ", "
                                  + religious_exemptions[1] + ", or a " + religious_exemptions[2])
     elif alternateChoice.get() == clothing_restrictions[1]:
-      #  if disability_restrictions ==
         alternate_suggestion = ("If you are disabled and need an alternative, I suggest picking out clothing that is comfortable and easy to "
                                 "get on without much help. Also, for certain surgery related issues, we also recommend using darker clothing.")
     elif alternateChoice.get() == clothing_restrictions[2]:
@@ -409,5 +455,5 @@ def get_alternatives():
 
     return alternate_suggestion
 
-#start Tkinter event loop
+# start Tkinter event loop
 window.mainloop()
