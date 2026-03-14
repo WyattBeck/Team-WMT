@@ -25,10 +25,13 @@ This project aims to provide general guidance while also acknowledging that fina
 
 Key considerations addressed in this project include:
 
-**Professional appearance**: Dressing appropriately for the industry and interview setting.
-**Budget limitations**: Providing suggestions based on affordable clothing options.
-**Accessibility and inclusion**: Offering alternative clothing suggestions for individuals with disabilities, religious attire requirements, or fabric sensitivities.
-**Community support resources**: Directing users to organizations that provide interview clothing assistance.
+- **Professional appearance**: Dressing appropriately for the industry and interview setting.
+
+- **Budget limitations**: Providing suggestions based on affordable clothing options.
+
+- **Accessibility and inclusion**: Offering alternative clothing suggestions for individuals with disabilities, religious attire requirements, or fabric sensitivities.
+
+- **Community support resources**: Directing users to organizations that provide interview clothing assistance.
 
 The project promotes awareness of barriers some job seekers face and provides helpful guidance and resources.
 
