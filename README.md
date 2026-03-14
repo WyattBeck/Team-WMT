@@ -85,11 +85,11 @@ Example 3:
 
 Main program interface:
 
-![Main Interview Outfit Helper interface showing user input options](assets/screenshots/Main-Page-View.png)
+![Main Interview Outfit Helper interface showing user input options](assets/Screenshots/Main-Page-View.png)
 
 Example recommendation result:
 
-![Recommendation popup showing suggested outfit and clothing resource links](assets/screenshots/Intended-TechFemale-Suggestion.png) 
+![Recommendation popup showing suggested outfit and clothing resource links](assets/Screenshots/Intended-TechFemale-Suggestion.png) 
 
 # Table of Files
 
