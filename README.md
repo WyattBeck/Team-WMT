@@ -100,7 +100,7 @@ Example recommendation result:
 | README.md | Project documentation and instructions | Wyatt Beck, Tyler Boyajian | 
 | assets/images | Background images used in the interface | Wyatt Beck |
 | assets/Project_Pictures | Clothing reference images displayed based on user selections | Tyler Boyajian |
-| assets/Screenshots | Clothing reference images displayed based on user selections | Tyler Boyajian |
+| assets/Screenshots | Images taken from the program to refrence in Readme.md | Tyler Boyajian |
 
 # Citations
 Background image: Photo by Harli Marten on Unsplash
