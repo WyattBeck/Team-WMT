@@ -26,7 +26,7 @@ shoes_suggestions = ['Clean sneakers', 'Sturdy Boots or Shoes', 'Casual dress sh
 clothing_restrictions = ['Religious Exemption', 'Disability', 'Fabric Sensory']
 religious_exemptions = ['Turban', 'Hijab', 'Yarmulke']
 disability_restrictions = ['Wheelchair', 'Amputee', 'Mental/Learning', 'Overweight', 'Surgery Related Bodily Changes']
-fabric_alternatives = ['Cotton', 'Bamboo', 'Modal', 'Lycra', 'Viscose or Rayon', 'Soft wool Alt.']
+fabric_alternatives = ['Cotton', 'Bamboo', 'Modal', 'Lycra', 'Viscose or Rayon', 'Soft wool alternative']
 
 # Alert box for disclaimer
 messagebox.showinfo("Disclaimer",
@@ -389,32 +389,32 @@ def get_recommendation():
             if budgetChoice.get() == budget_ranges[0]:
                 suggestion = "Since your budget is 0; use the cleanest, nicest thing in your closet."
             elif budgetChoice.get() == budget_ranges[1]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
             elif budgetChoice.get() == budget_ranges[2]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
             elif budgetChoice.get() == budget_ranges[3]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
             elif budgetChoice.get() == budget_ranges[4]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
 
         elif interviewChoice.get() == interview_types[1]:  # Via Zoom
             if budgetChoice.get() == budget_ranges[0]:
                 suggestion = "Since your budget is 0; use the cleanest, nicest thing in your closet."
             elif budgetChoice.get() == budget_ranges[1]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
             elif budgetChoice.get() == budget_ranges[2]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
             elif budgetChoice.get() == budget_ranges[3]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
             elif budgetChoice.get() == budget_ranges[4]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a"  + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0])
 
         elif interviewChoice.get() == interview_types[2]:  # Over the Phone
@@ -422,19 +422,19 @@ def get_recommendation():
                 suggestion = ("Since your budget is 0; use the cleanest, nicest thing in your closet. "
                               "They may not see you, but being nicely dressed can help boost confidence.")
             elif budgetChoice.get() == budget_ranges[1]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0]
                               + "They may not see you, but being nicely dressed can help boost confidence.")
             elif budgetChoice.get() == budget_ranges[2]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0]
                               + "They may not see you, but being nicely dressed can help boost confidence.")
             elif budgetChoice.get() == budget_ranges[3]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0]
                               + "They may not see you, but being nicely dressed can help boost confidence.")
             elif budgetChoice.get() == budget_ranges[4]:
-                suggestion = ("I recommend that you wear: either a" + shirt_suggestions[4] + " or " + shirt_suggestions[6]
+                suggestion = ("I recommend that you wear: either a " + shirt_suggestions[4] + " or " + shirt_suggestions[6]
                               + ", either " + pants_suggestions[0] + " or " + pants_suggestions[3] + ", and " + shoes_suggestions[0]
                               + "They may not see you, but being nicely dressed can help boost confidence.")
 
@@ -452,7 +452,7 @@ def get_alternatives():
     elif alternateChoice.get() == clothing_restrictions[2]:
         alternate_suggestion = ("If you have issues with certain fabrics, I suggest one of these alternative fabrics: \n"
                                 + fabric_alternatives[0] + ", " + fabric_alternatives[1] + ", " + fabric_alternatives[2] + ", " + fabric_alternatives[3] +
-                                ", " + fabric_alternatives[4] + ", or for those particularly susceptible to regular wool; a" + fabric_alternatives[5])
+                                ", " + fabric_alternatives[4] + ", or for those particularly susceptible to regular wool; a " + fabric_alternatives[5])
 
     return alternate_suggestion
 
