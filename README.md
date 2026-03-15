@@ -33,7 +33,7 @@ Key considerations addressed in this project include:
 
 - **Community support resources**: Directing users to organizations that provide interview clothing assistance.
 
-The project promotes awareness of barriers some job seekers face and provides helpful guidance and resources.
+The project promotes awareness of barriers some job seekers face and provides helpful guidance and resources. This project also aligns with Diversity, Social Justice, and accessibility principles by recognizing that not all job seekers have equal access to professional clothing, workplace guidance, or accessible apparel options. By including affordability considerations, accessibility focused clothing alternatives, and links to community support programs, the application aims to reduce some of the barriers individuals may face when preparing for job interviews.
 
 # Project Dependencies
 
